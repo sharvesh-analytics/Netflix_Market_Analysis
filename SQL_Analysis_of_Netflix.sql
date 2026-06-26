@@ -109,3 +109,143 @@ SELECT Genre,
 ROUND(AVG(Duration_Minutes),2) AS Avg_Duration
 FROM Netflix
 GROUP BY Genre;
+
+
+-- RATING ANALYSIS
+
+SELECT Rating,
+COUNT(*) AS Total_Content
+FROM Netflix
+GROUP BY Rating
+ORDER BY Total_Content DESC;
+
+
+SELECT *
+FROM Netflix
+ORDER BY IMDb_Rating DESC
+LIMIT 10;
+
+
+SELECT *
+FROM Netflix
+ORDER BY IMDb_Rating ASC
+LIMIT 10;
+
+
+
+-- RELEASE YEAR ANALYSIS
+
+SELECT Release_Year,
+COUNT(*) AS Total_Content
+FROM Netflix
+GROUP BY Release_Year
+ORDER BY Release_Year;
+
+
+SELECT Release_Year,
+COUNT(*) AS Total_Content
+FROM Netflix
+GROUP BY Release_Year
+ORDER BY Total_Content DESC
+LIMIT 1;
+
+
+
+-- MOVIES VS TV SHOWS
+
+SELECT
+Type,
+COUNT(*)*100.0/
+(SELECT COUNT(*) FROM Netflix)
+AS Percentage
+FROM Netflix
+GROUP BY Type;
+
+
+-- ADVANCED ANALYSIS
+
+SELECT Country,
+Genre,
+COUNT(*) AS Total_Content
+FROM Netflix
+GROUP BY Country,Genre
+ORDER BY Country,Total_Content DESC;
+
+
+SELECT Country,
+Genre,
+COUNT(*) AS Content_Count
+FROM Netflix
+GROUP BY Country,Genre
+ORDER BY Content_Count DESC;
+
+
+
+-- WINDOW FUNCTIONS
+
+SELECT
+Title,
+IMDb_Rating,
+RANK() OVER(
+ORDER BY IMDb_Rating DESC
+) AS Ranking
+FROM Netflix;
+
+
+SELECT
+Title,
+IMDb_Rating,
+DENSE_RANK() OVER(
+ORDER BY IMDb_Rating DESC
+) AS Ranking
+FROM Netflix;
+
+SELECT
+Title,
+ROW_NUMBER() OVER(
+ORDER BY IMDb_Rating DESC
+) AS Row_No
+FROM Netflix;
+
+
+-- CASE WHEN
+
+SELECT
+Title,
+IMDb_Rating,
+CASE
+WHEN IMDb_Rating >= 8 THEN 'Excellent'
+WHEN IMDb_Rating >= 7 THEN 'Good'
+ELSE 'Average'
+END AS Category
+FROM Netflix;
+
+
+
+-- SUBQUERY
+
+SELECT *
+FROM Netflix
+WHERE IMDb_Rating >
+(
+SELECT AVG(IMDb_Rating)
+FROM Netflix
+);
+
+
+
+-- HAVING
+
+SELECT Genre,
+COUNT(*) AS Total_Content
+FROM Netflix
+GROUP BY Genre
+HAVING COUNT(*) > 100;
+
+
+
+
+
+
+
+
