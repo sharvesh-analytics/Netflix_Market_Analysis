@@ -1,205 +1,62 @@
-# 🎬 Netflix Content Intelligence Analysis
+# 🎬 Netflix Global Market Analysis & Business Intelligence
 
-## 📌 Project Overview
-
-The **Netflix Content Intelligence Analysis** is an end-to-end Data Analytics project designed to analyze Netflix's content library using **Python, SQL, and Power BI**. The project focuses on transforming raw data into meaningful business insights through data cleaning, exploratory data analysis (EDA), SQL-based analysis, and an interactive Power BI dashboard.
-
-This project demonstrates the complete analytics workflow followed by Data Analysts, from data preprocessing to business intelligence reporting.
-
----
-
-## 🎯 Project Objectives
-
-* Analyze Netflix's content distribution across different countries and genres.
-* Compare Movies and TV Shows.
-* Identify content growth trends over the years.
-* Explore IMDb ratings and content duration.
-* Build an interactive dashboard for business decision-making.
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-Analytics-003B57?style=for-the-badge&logo=postgresql&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
 ---
 
-## 🛠️ Tech Stack
+## 📌 Executive Summary
 
-* 🐍 Python
-* 📊 Power BI
-* 🗄️ SQL (MySQL)
-* 📑 Pandas
-* 🔢 NumPy
-* 📈 Matplotlib
-* 📉 Exploratory Data Analysis (EDA)
+This project delivers an end-to-end data analytics and business intelligence solution evaluating Netflix's global content library. By combining **Python exploratory data analysis (EDA)**, **SQL analytical querying**, and **interactive Power BI dashboards**, the project derives key content acquisition, genre distribution, and rating strategies for streaming decision-makers.
 
 ---
 
-## 📂 Dataset Information
+## ⚙️ Project Architecture & Workflow
 
-The dataset contains information about Netflix content, including:
-
-* Title ID
-* Title
-* Type (Movie / TV Show)
-* Country
-* Genre
-* Rating
-* Release Year
-* Date Added
-* Duration (Minutes)
-* IMDb Rating
+```mermaid
+flowchart LR
+    A[Raw Dataset CSV] --> B[Python Data Preprocessing & Cleaning]
+    B --> C[SQL Database Querying & Aggregation]
+    C --> D[Power BI Data Modeling & DAX Measures]
+    D --> E[Executive Interactive Dashboard]
+```
 
 ---
 
-## 🧹 Data Cleaning & Preprocessing
+## 💡 Key Insights & Business Highlights
 
-Performed using Python:
-
-* Dataset Inspection
-* Missing Value Detection
-* Duplicate Record Check
-* Data Type Validation
-* Statistical Summary
-* Unique Value Analysis
-* Outlier Detection
-* Data Filtering
-* Sorting & Grouping
-* Feature Understanding
+- **🎥 Content Mix Ratios:** Analyzed the shift between Movie vs TV Show additions over time, showing strategic pivot towards series retention.
+- **🌍 Regional Production Hubs:** Identified top content-producing countries (US, India, UK) and regional genre preferences.
+- **⏱️ Duration & Ratings Analysis:** Mapped content rating categories (TV-MA, TV-14, PG-13) against genre target demographics.
+- **📊 Release Velocity:** Tracked annual growth rate of content additions to evaluate library expansion trends.
 
 ---
 
-## 📊 SQL Analysis
+## 🛠️ Tech Stack & Analytical Methods
 
-Business insights generated using SQL:
-
-* Total Titles
-* Movies vs TV Shows
-* Top Countries by Content
-* Genre-wise Analysis
-* Rating Distribution
-* Year-wise Content Growth
-* Highest Rated Titles
-* Average IMDb Rating
-* Country-wise Content Analysis
-* Window Functions (ROW_NUMBER, RANK, DENSE_RANK)
-* CASE WHEN Analysis
-* GROUP BY & HAVING
-* Aggregate Functions
+- **Data Wrangling:** Python (`Pandas`, `NumPy`)
+- **Data Visualization:** Seaborn, Matplotlib, Power BI
+- **SQL Analysis:** Aggregations, Window Functions, CTEs
+- **BI & Modeling:** DAX measures, Custom Tooltips, Slicers, Star Schema
 
 ---
 
-## 📈 Power BI Dashboard
+## 🚀 How to Run
 
-### Executive KPIs
-
-* Total Titles
-* Total Movies
-* Total TV Shows
-* Average IMDb Rating
-* Total Countries
-* Total Genres
-
-### Dashboard Pages
-
-### 1️⃣ Executive Overview
-
-* KPI Cards
-* Movies vs TV Shows
-* Interactive Filters
-
-### 2️⃣ Content Growth Analysis
-
-* Year-wise Content Trend
-* Movies vs TV Shows Trend
-
-### 3️⃣ Country Analysis
-
-* Top Countries
-* Country Contribution
-* Geographic Map
-
-### 4️⃣ Genre Intelligence
-
-* Genre Distribution
-* Top Genres
-* Genre-wise Content
-
-### 5️⃣ Rating Analysis
-
-* Rating Distribution
-* Content Classification
-
-### 6️⃣ Duration Analysis
-
-* Duration Distribution
-* Average Duration
-* Longest & Shortest Content
-
-### 7️⃣ IMDb Rating Analysis
-
-* Top Rated Titles
-* Genre-wise Average Rating
-* Rating Comparison
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/sharvesh-analytics/Netflix_Market_Analysis.git
+   ```
+2. **Run Jupyter Notebook:**
+   ```bash
+   jupyter notebook
+   ```
+3. **Open Power BI Dashboard:**
+   - Launch Power BI Desktop and open the `.pbix` dashboard file.
 
 ---
 
-## 📌 Power BI Features Used
-
-* KPI Cards
-* Line Chart
-* Clustered Bar Chart
-* Column Chart
-* Donut Chart
-* Treemap
-* Map Visual
-* Table Visual
-* Slicers
-* Drill Through
-* Tooltips
-* Dynamic Filtering
-* Interactive Dashboard
-
----
-
-## 📊 Key Business Insights
-
-* Identified the countries contributing the most Netflix content.
-* Compared the distribution of Movies and TV Shows.
-* Analyzed genre popularity across regions.
-* Evaluated IMDb rating trends.
-* Examined yearly content growth.
-* Explored rating distribution across the platform.
-* Analyzed content duration patterns.
-
----
-
-## 🚀 Skills Demonstrated
-
-* Data Cleaning
-* Exploratory Data Analysis (EDA)
-* SQL Query Writing
-* Business Intelligence
-* Data Visualization
-* Dashboard Design
-* KPI Development
-* Business Insights
-* Storytelling with Data
-* Power BI Development
-
----
-
-## 📁 Project Files
-
-* Dataset (CSV)
-* Python Analysis Notebook
-* SQL Queries
-* Power BI Dashboard (.pbix)
-* Dashboard Screenshots
-* README.md
-
----
-
-## 🎯 Conclusion
-
-This project demonstrates a complete Data Analytics workflow, showcasing how raw Netflix content data can be transformed into actionable business insights using Python, SQL, and Power BI. The dashboard enables users to explore content trends, country performance, genre distribution, ratings, and overall content strategy through an interactive and data-driven interface.
-
-⭐ If you found this project useful, feel free to explore the repository and share your feedback.
-
-## AUTHOR
-   SHARVESH PANDEY
+### 👤 Author
+**Sharvesh Pandey** | [LinkedIn](https://www.linkedin.com/in/sharvesh-analytics) | [GitHub Profile](https://github.com/sharvesh-analytics)
