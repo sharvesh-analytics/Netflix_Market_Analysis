@@ -27,7 +27,7 @@ flowchart LR
 
 ## 💡 Key Insights & Business Highlights
 
-- **🎥 Content Mix Ratios:** Analyzed the shift between Movie vs TV Show additions over time, showing strategic pivot towards series retention.
+- **🎥 Content Mix Ratios:** Analyzed the shift between Movie vs TV Show additions over time, showing strategic pivot  towards series retention.
 - **🌍 Regional Production Hubs:** Identified top content-producing countries (US, India, UK) and regional genre preferences.
 - **⏱️ Duration & Ratings Analysis:** Mapped content rating categories (TV-MA, TV-14, PG-13) against genre target demographics.
 - **📊 Release Velocity:** Tracked annual growth rate of content additions to evaluate library expansion trends.
