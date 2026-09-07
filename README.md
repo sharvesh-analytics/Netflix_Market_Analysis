@@ -1,4 +1,4 @@
-# 🎬 Netflix Global Market Analysis & Business Intelligence
+# 🎬  Netflix Global Market Analysis & Business Intelligence
 
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
